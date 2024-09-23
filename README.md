@@ -1,1 +1,1 @@
-# university-selection
+# SMTP Innovators
