@@ -1,0 +1,8 @@
+.navbar {
+    padding: 10px 40px 10px 20px;
+}
+
+.navbar .nav-link {
+    font-size: 1.2rem;
+    margin-left: 2rem;
+}
