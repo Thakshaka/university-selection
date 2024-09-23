@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "../../css/bootstrap.min.css";
-import "../../js/bootstrap.bundle.min.js";
 import "./Home.css";
 import NavBar from "../NavBar/NavBar";
 import uom_logo from "../../uom-logo.svg";

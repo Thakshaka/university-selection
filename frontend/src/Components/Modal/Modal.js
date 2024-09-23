@@ -1,5 +1,7 @@
 import React from "react";
 
+// Temporary Modal Component
+
 export default function Modal() {
   return (
     <div>
@@ -9,7 +11,7 @@ export default function Modal() {
         data-bs-toggle="modal"
         data-bs-target="#staticBackdrop"
       >
-        Modal Button
+        Test Button
       </button>
 
       <div

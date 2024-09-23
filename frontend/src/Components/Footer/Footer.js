@@ -14,13 +14,10 @@ export default function Footer() {
         <div className="container p-5">
           <div className="row">
             <div className="col-lg-6 col-md-6">
-              <h5>FIT Results</h5>
+              <h5>University</h5>
 
               <p className="description">
-                Welcome to FIT Results! Your reliable platform for accessing
-                semester results of University of Moratuwa's FIT students.
-                Currently providing Batch 21's results. Stay tuned for updates
-                on upcoming batches.
+                Description 1 here
               </p>
             </div>
 
@@ -29,8 +26,7 @@ export default function Footer() {
 
               <p>
                 <p className="description">
-                  If you have any concerns or find any errors in your results,
-                  please feel free to reach out for assistance. Email: <a href="mailto:thakshakarathnayake20@gmail.com" className="text-white">thakshakarathnayake20@gmail.com</a>
+                Description 2 here
                 </p>
                 
               </p>
@@ -59,7 +55,7 @@ export default function Footer() {
         </div>
 
         <div className="text-center p-2 copyright" style={{ backgroundColor: "#17345A" }}>
-          Copyright © 2023{" "}
+          Copyright © 2024{" "}
           <img src={logo} alt="LOGO" width="40" height="27"></img> All rights
           reserved
         </div>

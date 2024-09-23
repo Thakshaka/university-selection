@@ -1,6 +1,4 @@
 import React from "react";
-import "../../css/bootstrap.min.css";
-import "../../js/bootstrap.bundle.min.js";
 import "./NavBar.css";
 import logo from "../../logo.svg";
 import "../Footer/Footer.js";
@@ -15,7 +13,7 @@ export default function NavBar() {
             <img src={logo} alt="LOGO" width="76" height="50"></img>
           </a>
           <a className="navbar-brand fw-bold" href="#!">
-            FIT RESULTS
+            UNIVERSITY
           </a>
           <button
             className="navbar-toggler"
