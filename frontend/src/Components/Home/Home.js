@@ -1,12 +1,35 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Home.css";
 import NavBar from "../NavBar/NavBar";
-import uom_logo from "../../uom-logo.svg";
 import Modal from "../Modal/Modal";
 import Footer from "../Footer/Footer";
-import Axios from "axios";
 
 export default function Home() {
+  const [subject1, setSubject1] = useState("");
+  const [subject2, setSubject2] = useState("");
+  const [subject3, setSubject3] = useState("");
+  const [zScore, setZScore] = useState("");
+  const [year, setYear] = useState("");
+  const [district, setDistrict] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Prevent form submission
+
+    const inputData = {
+      subject1,
+      subject2,
+      subject3,
+      zScore,
+      year,
+      district,
+    };
+
+    console.log(inputData);
+
+    // Trigger Bootstrap modal using its JavaScript API
+    const modal = new window.bootstrap.Modal(document.getElementById('staticBackdrop'));
+    modal.show();
+  };
 
   return (
     <div className="content" id="home">
@@ -14,19 +37,78 @@ export default function Home() {
 
       <div className="container d-flex flex-column bd-highlight justify-content-center align-items-center shadow-lg p-5">
         <div className="p-2 bd-highlight">
-          <img src={uom_logo} alt="UOM LOGO" width="150" height="160"></img>
+          {/* <img src={uom_logo} alt="UOM LOGO" width="150" height="160"></img> */}
         </div>
 
         <div className="p-2 bd-highlight pb-4">
-          <h2 className="topic fw-bold text-center">FIND YOUR EXAM RESULTS HERE</h2>
+          <h2 className="topic fw-bold text-center">FIND YOUR COURSES HERE</h2>
         </div>
 
         <div className="p-2 bd-highlight">
-          <form className="row g-4 needs-validation">
+          <form className="row g-4 needs-validation" onSubmit={handleSubmit}>
+            <div className="col-md-6">
+              <label htmlFor="subject1" className="form-label">
+                Subject 1
+              </label>
+              <select
+                className="form-select shadow-sm"
+                id="subject1"
+                value={subject1}
+                onChange={(e) => setSubject1(e.target.value)}
+                required
+              >
+                <option selected disabled value="">
+                  Select
+                </option>
+                <option>Combined Mathematics</option>
+                <option>Physics</option>
+                <option>Chemistry</option>
+              </select>
 
-          <div className="col-md-6">
-              <label for="validationCustomUsername" className="form-label">
-                Index Number
+              <div className="mt-2"></div>
+
+              <label htmlFor="subject2" className="form-label">
+                Subject 2
+              </label>
+              <select
+                className="form-select shadow-sm"
+                id="subject2"
+                value={subject2}
+                onChange={(e) => setSubject2(e.target.value)}
+                required
+              >
+                <option selected disabled value="">
+                  Select
+                </option>
+                <option>Combined Mathematics</option>
+                <option>Physics</option>
+                <option>Chemistry</option>
+              </select>
+
+              <div className="mt-2"></div>
+
+              <label htmlFor="subject3" className="form-label">
+                Subject 3
+              </label>
+              <select
+                className="form-select shadow-sm"
+                id="subject3"
+                value={subject3}
+                onChange={(e) => setSubject3(e.target.value)}
+                required
+              >
+                <option selected disabled value="">
+                  Select
+                </option>
+                <option>Combined Mathematics</option>
+                <option>Physics</option>
+                <option>Chemistry</option>
+              </select>
+            </div>
+
+            <div className="col-md-6">
+              <label htmlFor="zScore" className="form-label">
+                Z-score
               </label>
               <div className="input-group has-validation">
                 <span className="input-group-text" id="inputGroupPrepend">
@@ -35,34 +117,55 @@ export default function Home() {
                 <input
                   type="text"
                   className="form-control shadow-sm"
-                  id="validationCustomUsername"
-                  aria-describedby="inputGroupPrepend"
+                  id="zScore"
+                  value={zScore}
+                  onChange={(e) => setZScore(e.target.value)}
                   required
-                ></input>
+                />
               </div>
-            </div>
 
-            <div className="col-md-6">
-              <label for="validationCustom04" className="form-label">
-                Semester
+              <div className="mt-2"></div>
+
+              <label htmlFor="year" className="form-label">
+                Year
               </label>
               <select
                 className="form-select shadow-sm"
-                id="validationCustom04"
+                id="year"
+                value={year}
+                onChange={(e) => setYear(e.target.value)}
                 required
               >
                 <option selected disabled value="">
                   Select
                 </option>
-                <option>L1S1</option>
-                <option>L1S2</option>
-                <option>L2S1</option>
+                <option>2024</option>
+              </select>
+
+              <div className="mt-2"></div>
+
+              <label htmlFor="district" className="form-label">
+                District
+              </label>
+              <select
+                className="form-select shadow-sm"
+                id="district"
+                value={district}
+                onChange={(e) => setDistrict(e.target.value)}
+                required
+              >
+                <option selected disabled value="">
+                  Select
+                </option>
+                <option>Colombo</option>
+                <option>Gampaha</option>
+                <option>Kaluthara</option>
               </select>
             </div>
 
             <div className="col-12 d-flex justify-content-center pt-4">
               <button className="btn btn-primary shadow-sm" type="submit">
-                Show Results
+                Show Courses
               </button>
             </div>
           </form>
@@ -72,7 +175,6 @@ export default function Home() {
       <Modal />
 
       <Footer />
-      
     </div>
   );
 }
