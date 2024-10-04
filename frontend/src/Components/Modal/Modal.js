@@ -15,7 +15,7 @@ export default function Modal() {
         <div className="modal-content">
           <div className="modal-header">
             <h5 className="modal-title fw-bold" id="staticBackdropLabel">
-              Courses Prediction
+              Courses
             </h5>
             <button
               type="button"
@@ -26,7 +26,7 @@ export default function Modal() {
           </div>
           <div className="modal-body">
             <div className="row text-center">
-              <div className="col fw-bold fs-4 pb-4">A/L Examination</div>
+              <div className="col fw-bold fs-4 pb-4">A/L Examination - 2024</div>
             </div>
             <div className="row px-2 py-1">
               <div className="col">Stream</div>
