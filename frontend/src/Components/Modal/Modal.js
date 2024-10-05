@@ -33,7 +33,7 @@ export default function Modal() {
               <div className="col">Physical Science</div>
             </div>
             <div className="row px-2 py-1">
-              <div className="col">Z-Score</div>
+              <div className="col">Z-score</div>
               <div className="col">2.1000</div>
             </div>
             <div className="row px-2 py-1">
