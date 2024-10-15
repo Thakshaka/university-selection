@@ -60,28 +60,8 @@ export default function NavBar() {
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <a className="dropdown-item" href="https://online.uom.lk/" target="_blank" rel="noreferrer">
-                      Moodle
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="https://lms.uom.lk/" target="_blank" rel="noreferrer">
-                      LMS
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="https://dms.uom.lk/" target="_blank" rel="noreferrer">
-                      DMS
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="https://web.mail.uom.lk/" target="_blank" rel="noreferrer">
-                      Web-Mail
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="https://uom.lk/lib" target="_blank" rel="noreferrer"> 
-                      Library
+                    <a className="dropdown-item" href="https://www.doenets.lk/examresults" target="_blank" rel="noreferrer">
+                      Exam Results
                     </a>
                   </li>
                 </ul>

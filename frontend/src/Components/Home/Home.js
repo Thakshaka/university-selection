@@ -17,6 +17,8 @@ export default function Home() {
   const [filteredResponse, setFilteredResponse] = useState([]);
   const [loading, setLoading] = useState(false);
   const [captchaValue, setCaptchaValue] = useState(null);
+  const [error, setError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const RECAPTCHA_SITE_KEY = process.env.REACT_APP_RECAPTCHA_SITE_KEY;
 
@@ -27,9 +29,12 @@ export default function Home() {
 
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent form submission
+    setError(false);
+    setErrorMessage("");
 
     if (!captchaValue) {
-      alert("Please verify the CAPTCHA.");
+      setError(true);
+      setErrorMessage("Please verify the CAPTCHA.");
       return;
     }
 
@@ -219,7 +224,11 @@ export default function Home() {
               />
             </div>
 
-            <div className="col-12 d-flex justify-content-center pt-2">
+            {error && (
+                <small className="text-danger mt-2 text-center">{errorMessage}</small>
+              )}
+
+            <div className="col-12 d-flex justify-content-center">
               <button className="btn btn-primary shadow-sm" type="submit" disabled={loading}>
                 {loading ? (
                   <span 
