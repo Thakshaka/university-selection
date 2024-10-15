@@ -3,6 +3,7 @@ import "./Home.css";
 import NavBar from "../NavBar/NavBar";
 import Modal from "../Modal/Modal";
 import Footer from "../Footer/Footer";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function Home() {
   const [subject1, setSubject1] = useState("");
@@ -11,11 +12,30 @@ export default function Home() {
   const [zScore, setZScore] = useState("");
   const [year, setYear] = useState("");
   const [district, setDistrict] = useState("");
+  const [userInputData, setInputData] = useState({});
+  const [response, setResponse] = useState({});
+  const [filteredResponse, setFilteredResponse] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [captchaValue, setCaptchaValue] = useState(null);
 
-  const handleSubmit = (e) => {
+  const RECAPTCHA_SITE_KEY = process.env.REACT_APP_RECAPTCHA_SITE_KEY;
+
+  // This will be called when the CAPTCHA is solved
+  const handleCaptchaChange = (value) => {
+    setCaptchaValue(value);
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent form submission
 
-    const inputData = {
+    if (!captchaValue) {
+      alert("Please verify the CAPTCHA.");
+      return;
+    }
+
+    setLoading(true);
+
+    const userInputData = {
       subject1,
       subject2,
       subject3,
@@ -24,11 +44,39 @@ export default function Home() {
       district,
     };
 
-    console.log(inputData);
+    setInputData(userInputData);
+    
+    try {
+      const response = await fetch("http://localhost:8080/predict/postUserInputData", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json", 
+        },
+        body: JSON.stringify(userInputData),
+      });
 
-    // Trigger Bootstrap modal using its JavaScript API
-    const modal = new window.bootstrap.Modal(document.getElementById('staticBackdrop'));
-    modal.show();
+      if (!response.ok) {
+        throw new Error("Failed to send userInputData to backend");
+      }
+
+      const res = await response.json();
+      console.log("Response:", res);
+      setResponse(res.modelResponseData);
+      setFilteredResponse(res.filteredModelResponseData);
+
+      // Trigger modal using its JavaScript API
+      const modal = new window.bootstrap.Modal(document.getElementById('staticBackdrop'));
+      modal.show();
+    } 
+    
+    catch (error) {
+      console.error("Error:", error);
+    }
+
+    finally {
+      setLoading(false);
+    }
+
   };
 
   return (
@@ -41,14 +89,14 @@ export default function Home() {
         </div>
 
         <div className="p-2 bd-highlight pb-4">
-          <h2 className="topic fw-bold text-center">FIND YOUR COURSES HERE</h2>
+          <h2 className="topic fw-bold text-center">FIND SUITABLE COURSES HERE</h2>
         </div>
 
         <div className="p-2 bd-highlight">
           <form className="row g-4 needs-validation" onSubmit={handleSubmit}>
             <div className="col-md-6">
               <label htmlFor="subject1" className="form-label">
-                Subject 1
+                Subject No.1*
               </label>
               <select
                 className="form-select shadow-sm"
@@ -68,7 +116,7 @@ export default function Home() {
               <div className="mt-2"></div>
 
               <label htmlFor="subject2" className="form-label">
-                Subject 2
+                Subject No.2*
               </label>
               <select
                 className="form-select shadow-sm"
@@ -88,7 +136,7 @@ export default function Home() {
               <div className="mt-2"></div>
 
               <label htmlFor="subject3" className="form-label">
-                Subject 3
+                Subject No.3*
               </label>
               <select
                 className="form-select shadow-sm"
@@ -108,7 +156,7 @@ export default function Home() {
 
             <div className="col-md-6">
               <label htmlFor="zScore" className="form-label">
-                Z-score
+                Your Z-score*
               </label>
               <div className="input-group has-validation">
                 <span className="input-group-text" id="inputGroupPrepend">
@@ -127,7 +175,7 @@ export default function Home() {
               <div className="mt-2"></div>
 
               <label htmlFor="year" className="form-label">
-                Year
+                Year*
               </label>
               <select
                 className="form-select shadow-sm"
@@ -145,7 +193,7 @@ export default function Home() {
               <div className="mt-2"></div>
 
               <label htmlFor="district" className="form-label">
-                District
+                District*
               </label>
               <select
                 className="form-select shadow-sm"
@@ -163,16 +211,53 @@ export default function Home() {
               </select>
             </div>
 
+            {/* CAPTCHA */}
             <div className="col-12 d-flex justify-content-center pt-4">
-              <button className="btn btn-primary shadow-sm" type="submit">
-                Show Courses
+              <ReCAPTCHA
+                sitekey={RECAPTCHA_SITE_KEY}
+                onChange={handleCaptchaChange}
+              />
+            </div>
+
+            <div className="col-12 d-flex justify-content-center pt-2">
+              <button className="btn btn-primary shadow-sm" type="submit" disabled={loading}>
+                {loading ? (
+                  <span 
+                    className="spinner-border spinner-border-sm" 
+                    role="status" 
+                    aria-hidden="true"
+                  ></span>
+                ) : (
+                  "Submit"
+                )}
+              </button>
+
+              <button 
+                className="btn btn-secondary shadow-sm ms-2"
+                type="button" 
+                onClick={() => {
+                  // Reset all fields
+                  setSubject1("");
+                  setSubject2("");
+                  setSubject3("");
+                  setZScore("");
+                  setYear("");
+                  setDistrict("");
+                  setResponse({});
+                }}
+              >
+                Reset
               </button>
             </div>
           </form>
         </div>
       </div>
 
-      <Modal />
+      <Modal 
+        userInputData={userInputData}
+        response={response}
+        filteredResponse={filteredResponse}
+      />
 
       <Footer />
     </div>

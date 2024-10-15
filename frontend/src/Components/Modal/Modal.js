@@ -1,6 +1,22 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-export default function Modal() {
+
+export default function Modal({ userInputData, response, filteredResponse }) {
+  const [filtered, setFiltered] = useState(true);
+
+  useEffect(() => {
+    // Add event listener for modal hide event
+    const modalElement = document.getElementById('staticBackdrop');
+    const handleModalHide = () => setFiltered(true); // Reset filtered to true when modal is closed
+
+    modalElement.addEventListener('hidden.bs.modal', handleModalHide);
+
+    // Cleanup the event listener when component is unmounted
+    return () => {
+      modalElement.removeEventListener('hidden.bs.modal', handleModalHide);
+    };
+  }, []);
+
   return (
     <div
       className="modal fade"
@@ -14,9 +30,11 @@ export default function Modal() {
       <div className="modal-dialog modal-dialog-centered modal-xl">
         <div className="modal-content">
           <div className="modal-header">
-            <h5 className="modal-title fw-bold" id="staticBackdropLabel">
-              Courses
-            </h5>
+          <h5 className="modal-title fw-bold" id="staticBackdropLabel">
+            {filtered 
+                ? "Suitable Courses" 
+                : "All Courses"}
+          </h5>
             <button
               type="button"
               className="btn-close"
@@ -26,23 +44,24 @@ export default function Modal() {
           </div>
           <div className="modal-body">
             <div className="row text-center">
-              <div className="col fw-bold fs-4 pb-4">A/L Examination - 2024</div>
+              <div className="col fw-bold fs-4 pb-4">G.C.E. A/L Examination ({userInputData.year})</div>
             </div>
+            
             <div className="row px-2 py-1">
               <div className="col">Stream</div>
               <div className="col">Physical Science</div>
             </div>
             <div className="row px-2 py-1">
               <div className="col">Z-score</div>
-              <div className="col">2.1000</div>
+              <div className="col">{userInputData.zScore}</div>
             </div>
             <div className="row px-2 py-1">
               <div className="col">A/L Year</div>
-              <div className="col">2024</div>
+              <div className="col">{userInputData.year}</div>
             </div>
             <div className="row px-2 py-1">
               <div className="col">District</div>
-              <div className="col">Colombo</div>
+              <div className="col">{userInputData.district}</div>
             </div>
             <div className="pt-4">
               <table className="table table-striped">
@@ -53,25 +72,58 @@ export default function Modal() {
                     <th scope="col">Course</th>
                     <th scope="col">University</th>
                     <th scope="col">Previous Year</th>
-                    <th scope="col">2024 Prediction</th>
+                    <th scope="col">This Year (Prediction)</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>001A</td>
-                    <td>Engineering</td>
-                    <td>University of Moratuwa</td>
-                    <td>2.0000</td>
-                    <td>2.1000</td>
-                  </tr>
+                  {filtered
+                    ? filteredResponse.length > 0
+                      ? filteredResponse.map((result, index) => (
+                          <tr key={index}>
+                            <th scope="row">{index + 1}</th>
+                            <td>{result.unicode}</td>
+                            <td>{result.course}</td>
+                            <td>{result.university}</td>
+                            <td>{result.previous_year}</td>
+                            <td>{result.this_year_predicted}</td>
+                          </tr>
+                        ))
+                      : (
+                        <tr>
+                          <td colSpan="6" className="text-center">
+                            No courses found
+                          </td>
+                        </tr>
+                      )
+                    : response.length > 0
+                    ? response.map((result, index) => (
+                        <tr key={index}>
+                          <th scope="row">{index + 1}</th>
+                          <td>{result.unicode}</td>
+                          <td>{result.course}</td>
+                          <td>{result.university}</td>
+                          <td>{result.previous_year}</td>
+                          <td>{result.this_year_predicted}</td>
+                        </tr>
+                      ))
+                    : (
+                      <tr>
+                        <td colSpan="6" className="text-center">
+                          No courses found
+                        </td>
+                      </tr>
+                    )}
                 </tbody>
               </table>
             </div>
           </div>
           <div className="modal-footer">
-            <button type="button" className="btn btn-primary">
-              All Courses
+            <button
+              type="button"
+              className="btn btn-primary"
+              onClick={() => setFiltered(!filtered)}
+            >
+              {filtered ? "All Courses" : "Suitable Courses"}
             </button>
             <button
               type="button"
