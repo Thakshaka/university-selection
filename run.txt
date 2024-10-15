@@ -1,0 +1,14 @@
+1. cd frontend
+
+npm i
+npm start
+
+2. cd backend
+
+npm i
+npm start
+
+3. cd model
+
+pip install fastapi uvicorn pandas scikit-learn
+python -m uvicorn cutoff_predictor:app --reload
