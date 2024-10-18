@@ -1,41 +1,41 @@
 category,district,unicode,course,university,year,z_score
-PS,Colombo,1,Engineering,University of Moratuwa,2014,2.001
-PS,Colombo,2,Engineering,University of Moratuwa,2015,2.1234
-PS,Colombo,3,Engineering,University of Moratuwa,2016,2.1034
-PS,Colombo,4,Engineering,University of Moratuwa,2017,2.2121
-PS,Colombo,5,Engineering,University of Moratuwa,2018,2.001
-PS,Colombo,6,Engineering,University of Moratuwa,2019,2.2345
-PS,Colombo,7,Engineering,University of Moratuwa,2020,2.1212
-PS,Colombo,8,Engineering,University of Moratuwa,2021,2.2222
-PS,Colombo,9,Engineering,University of Moratuwa,2022,2.2345
-PS,Colombo,10,Engineering,University of Moratuwa,2023,2.2021
-PS,Gampaha,1,Engineering,University of Moratuwa,2014,2
-PS,Gampaha,2,Engineering,University of Moratuwa,2015,2.0001
-PS,Gampaha,3,Engineering,University of Moratuwa,2016,2.0002
-PS,Gampaha,4,Engineering,University of Moratuwa,2017,2.0003
-PS,Gampaha,5,Engineering,University of Moratuwa,2018,2.0004
-PS,Gampaha,6,Engineering,University of Moratuwa,2019,2.0005
-PS,Gampaha,7,Engineering,University of Moratuwa,2020,2.0006
-PS,Gampaha,8,Engineering,University of Moratuwa,2021,2.0007
-PS,Gampaha,9,Engineering,University of Moratuwa,2022,2.0008
-PS,Gampaha,10,Engineering,University of Moratuwa,2023,2.1
-PS,Colombo,1,IT,University of Moratuwa,2014,1.655
-PS,Colombo,2,IT,University of Moratuwa,2015,2.0001
-PS,Colombo,3,IT,University of Moratuwa,2016,2.0002
-PS,Colombo,4,IT,University of Moratuwa,2017,2.0003
-PS,Colombo,5,IT,University of Moratuwa,2018,2.0004
-PS,Colombo,6,IT,University of Moratuwa,2019,2.0005
-PS,Colombo,7,IT,University of Moratuwa,2020,2.0006
-PS,Colombo,8,IT,University of Moratuwa,2021,2.0007
-PS,Colombo,9,IT,University of Moratuwa,2022,2.0008
-PS,Colombo,10,IT,University of Moratuwa,2023,2.1
-PS,Colombo,1,T Engineering,University of Moratuwa,2014,2.001
-PS,Colombo,2,T Engineering,University of Moratuwa,2015,2.1234
-PS,Colombo,3,T Engineering,University of Moratuwa,2016,2.1034
-PS,Colombo,4,T Engineering,University of Moratuwa,2017,2.2121
-PS,Colombo,5,T Engineering,University of Moratuwa,2018,2.001
-PS,Colombo,6,T Engineering,University of Moratuwa,2019,2.2345
-PS,Colombo,7,T Engineering,University of Moratuwa,2020,2.1212
-PS,Colombo,8,T Engineering,University of Moratuwa,2021,2.2222
-PS,Colombo,9,T Engineering,University of Moratuwa,2022,2.2345
-PS,Colombo,10,T Engineering,University of Moratuwa,2023,2.2021
+Physical Science,Colombo,1,Engineering,University of Moratuwa,2014,2.001
+Physical Science,Colombo,2,Engineering,University of Moratuwa,2015,2.1234
+Physical Science,Colombo,3,Engineering,University of Moratuwa,2016,2.1034
+Physical Science,Colombo,4,Engineering,University of Moratuwa,2017,2.2121
+Physical Science,Colombo,5,Engineering,University of Moratuwa,2018,2.001
+Physical Science,Colombo,6,Engineering,University of Moratuwa,2019,2.2345
+Physical Science,Colombo,7,Engineering,University of Moratuwa,2020,2.1212
+Physical Science,Colombo,8,Engineering,University of Moratuwa,2021,2.2222
+Physical Science,Colombo,9,Engineering,University of Moratuwa,2022,2.2345
+Physical Science,Colombo,10,Engineering,University of Moratuwa,2023,2.2021
+Physical Science,Gampaha,1,Engineering,University of Moratuwa,2014,2
+Physical Science,Gampaha,2,Engineering,University of Moratuwa,2015,2.0001
+Physical Science,Gampaha,3,Engineering,University of Moratuwa,2016,2.0002
+Physical Science,Gampaha,4,Engineering,University of Moratuwa,2017,2.0003
+Physical Science,Gampaha,5,Engineering,University of Moratuwa,2018,2.0004
+Physical Science,Gampaha,6,Engineering,University of Moratuwa,2019,2.0005
+Physical Science,Gampaha,7,Engineering,University of Moratuwa,2020,2.0006
+Physical Science,Gampaha,8,Engineering,University of Moratuwa,2021,2.0007
+Physical Science,Gampaha,9,Engineering,University of Moratuwa,2022,2.0008
+Physical Science,Gampaha,10,Engineering,University of Moratuwa,2023,2.1
+Physical Science,Colombo,1,IT,University of Moratuwa,2014,1.655
+Physical Science,Colombo,2,IT,University of Moratuwa,2015,2.0001
+Physical Science,Colombo,3,IT,University of Moratuwa,2016,2.0002
+Physical Science,Colombo,4,IT,University of Moratuwa,2017,2.0003
+Physical Science,Colombo,5,IT,University of Moratuwa,2018,2.0004
+Physical Science,Colombo,6,IT,University of Moratuwa,2019,2.0005
+Physical Science,Colombo,7,IT,University of Moratuwa,2020,2.0006
+Physical Science,Colombo,8,IT,University of Moratuwa,2021,2.0007
+Physical Science,Colombo,9,IT,University of Moratuwa,2022,2.0008
+Physical Science,Colombo,10,IT,University of Moratuwa,2023,2.1
+Physical Science,Colombo,1,T Engineering,University of Moratuwa,2014,2.001
+Physical Science,Colombo,2,T Engineering,University of Moratuwa,2015,2.1234
+Physical Science,Colombo,3,T Engineering,University of Moratuwa,2016,2.1034
+Physical Science,Colombo,4,T Engineering,University of Moratuwa,2017,2.2121
+Physical Science,Colombo,5,T Engineering,University of Moratuwa,2018,2.001
+Physical Science,Colombo,6,T Engineering,University of Moratuwa,2019,2.2345
+Physical Science,Colombo,7,T Engineering,University of Moratuwa,2020,2.1212
+Physical Science,Colombo,8,T Engineering,University of Moratuwa,2021,2.2222
+Physical Science,Colombo,9,T Engineering,University of Moratuwa,2022,2.2345
+Physical Science,Colombo,10,T Engineering,University of Moratuwa,2023,2.2021

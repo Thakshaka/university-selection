@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 
-export default function Modal({ userInputData, response, filteredResponse }) {
+export default function Modal({ userInputData, response, filteredResponse, category }) {
   const [filtered, setFiltered] = useState(true);
 
   useEffect(() => {
@@ -49,7 +49,7 @@ export default function Modal({ userInputData, response, filteredResponse }) {
             
             <div className="row px-2 py-1">
               <div className="col">Stream</div>
-              <div className="col">Physical Science</div>
+              <div className="col">{category}</div>
             </div>
             <div className="row px-2 py-1">
               <div className="col">Z-score</div>
@@ -64,6 +64,7 @@ export default function Modal({ userInputData, response, filteredResponse }) {
               <div className="col">{userInputData.district}</div>
             </div>
             <div className="pt-4">
+            <div className="table-responsive" style={{ overflowX: 'auto' }}>
               <table className="table table-striped">
                 <thead>
                   <tr>
@@ -115,6 +116,7 @@ export default function Modal({ userInputData, response, filteredResponse }) {
                     )}
                 </tbody>
               </table>
+            </div>
             </div>
           </div>
           <div className="modal-footer">

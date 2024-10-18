@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Home.css";
+import "./Courses.css";
 import NavBar from "../NavBar/NavBar";
 import Modal from "../Modal/Modal";
 import Footer from "../Footer/Footer";
@@ -8,7 +8,7 @@ import DistrictSearchableSelect from '../SearchableSelect/DistrictSearchableSele
 import SubjectSearchableSelect from "../SearchableSelect/SubjectSearchableSelect";
 
 
-export default function Home() {
+export default function Courses() {
   const [subject1, setSubject1] = useState("");
   const [subject2, setSubject2] = useState("");
   const [subject3, setSubject3] = useState("");
