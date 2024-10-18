@@ -110,6 +110,31 @@
 
 import ballerina/http;
 
+@http:ServiceConfig {
+    cors:{
+        allowOrigins:["http://localhost:3000"],
+        allowMethods:["GET","OPTIONS","POST"]
+        // allowOrigins: ["http://localhost:3000"],
+        // allowMethods: ["GET", "OPTIONS", "POST"],
+        // allowHeaders: ["Content-Type"],
+        // exposeHeaders: [],
+        // allowCredentials: false,
+        // maxAge: 3600
+    },
+    auth:[{
+        jwtValidatorConfig:{
+            issuer:"wso2",
+            audience:"ballerina",
+            signatureConfig:{
+                certFile:"resources/public.crt"
+            }
+        },
+        scopes:["admin","user"]
+    }
+    ]
+}
+
+
 type semesterDetails record {| 
     readonly int id; 
     string semester; 
@@ -214,3 +239,4 @@ service /university\-selection on new http:Listener(9090) {
         return response;
     }
 }
+

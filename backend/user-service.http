@@ -1,0 +1,41 @@
+# Register a new user
+POST http://localhost:9090/auth/register
+Content-Type: application/json
+
+{
+    "username": "john_doe",
+    "password": "securepassword123"
+}
+
+### 
+
+# Login a user
+POST http://localhost:9090/auth/login
+Content-Type: application/json
+
+{
+    "username": "john_doe",
+    "password": "securepassword123"
+}
+
+###
+
+# Register another user
+POST http://localhost:9090/auth/register
+Content-Type: application/json
+
+{
+    "username": "jane_doe",
+    "password": "mypassword456"
+}
+
+###
+
+# Attempt login with incorrect password
+POST http://localhost:9090/auth/login
+Content-Type: application/json
+
+{
+    "username": "jane_doe",
+    "password": "wrongpassword"
+}

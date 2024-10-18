@@ -1,6 +1,7 @@
 import React from "react";
 import Home from "./Components/Home/Home";
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import LoginPage from "./Components/Login/LoginPage";
 
 function App(){
   return (
@@ -8,7 +9,8 @@ function App(){
     <Router>
       <div className='App'>
         <Routes>
-          <Route exact path='/' element={<Home />}></Route>
+          <Route  path='/home' element={<Home />}/>
+          <Route path="/" element={<LoginPage/>}/>
         </Routes>
       </div>
     </Router>
