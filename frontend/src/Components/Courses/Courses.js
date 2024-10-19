@@ -186,14 +186,14 @@ export default function Courses() {
             <div className="col-md-6">
               {renderSubjectDropdown(subject1, setSubject1, t('form.subject1'), 1)}
               <div className="mt-2"></div>
-              {renderSubjectDropdown(subject1, setSubject1, t('form.subject2'), 2)}
+              {renderSubjectDropdown(subject2, setSubject2, t('form.subject2'), 2)}
               <div className="mt-2"></div>
-              {renderSubjectDropdown(subject1, setSubject1, t('form.subject1'), 3)}
+              {renderSubjectDropdown(subject3, setSubject3, t('form.subject3'), 3)}
             </div>
 
             <div className="col-md-6">
             <label htmlFor="zScore" className="form-label">
-                {t('form.zScore')}
+              {t('form.zScore')}
             </label>
             <div className="input-group has-validation">
               <span className="input-group-text" id="inputGroupPrepend">
@@ -220,7 +220,7 @@ export default function Courses() {
               <div className="mt-2"></div>
 
               <label htmlFor="year" className="form-label">
-                {t('form.year')}
+               {t('form.year')}
               </label>
               <select
                 className="form-select shadow-sm"

@@ -4,7 +4,11 @@
       "about": "අප පිළිබදව",
       "contact": "සම්බන්ධ කරගන්න",
       "quickAccess": "ඉක්මන් ප්‍රවේශය",
-      "examResults": "විභාග ප්‍රතිඵල"
+      "examResults": "විභාග ප්‍රතිඵල",
+      "login": "Login",
+      "logout": "Logout",
+      "welcome": "Welcome, {{username}}",
+      "courses": "පාඨමාලා"
     },
     "courses": {
       "welcome": "ඔබට සුදුසු පාඨමාලා සොයාගන්න",
@@ -22,19 +26,47 @@
       "captchaError": "CAPTCHA සත්යාපනය කරන්න."
     },
     "modal": {
-    "suitableCourses": "සුදුසු පාඨමාලා",
-    "allCourses": "සියලු පාඨමාලා",
-    "examTitle": "අ.පො.ස. උසස් පෙළ විභාගය ({{year}})",
-    "stream": "විෂය ධාරාව",
-    "zScore": "Z-අගය",
-    "alYear": "අවුරුද්ද",
-    "district": "දිස්ත්‍රික්කය",
-    "course": "පාඨමාලාව",
-    "university": "විශ්වවිද්‍යාලය",
-    "previousYear": "පෙර අවුරුද්ද",
-    "thisYearPrediction": "මෙම අවුරුද්ද (අනුමානය)",
-    "noCoursesFound": "පාඨමාලා කිසිවක් සොයාගත නොහැක",
-    "close": "වසන්න"
-  }
+      "suitableCourses": "සුදුසු පාඨමාලා",
+      "allCourses": "සියලු පාඨමාලා",
+      "examTitle": "අ.පො.ස. උසස් පෙළ විභාගය ({{year}})",
+      "stream": "විෂය ධාරාව",
+      "zScore": "Z-අගය",
+      "alYear": "අවුරුද්ද",
+      "district": "දිස්ත්‍රික්කය",
+      "course": "පාඨමාලාව",
+      "university": "විශ්වවිද්‍යාලය",
+      "previousYear": "පෙර අවුරුද්ද",
+      "thisYearPrediction": "මෙම අවුරුද්ද (අනුමානය)",
+      "noCoursesFound": "පාඨමාලා කිසිවක් සොයාගත නොහැක",
+      "close": "වසන්න"
+    },
+    "login": {
+      "title": "පිවිසුම",
+      "email": "විද්‍යුත් තැපැල් ලිපිනය",
+      "password": "මුරපදය",
+      "submit": "පිවිසෙන්න",
+      "forgotPassword": "මුරපදය අමතක වුණාද?",
+      "noAccount": "ගිණුමක් නොමැතිද?",
+      "register": "ලියාපදිංචි වන්න",
+      "errorAllFields": "කරුණාකර සියලුම පිරවිය යුතු ස්ථාන පුරවන්න.",
+      "errorInvalid": "වලංගු නොවන විද්‍යුත් තැපෑල හෝ මුරපදය."
+    },
+    "register": {
+      "title": "ලියාපදිංචිය",
+      "name": "සම්පූර්ණ නම",
+      "email": "විද්‍යුත් තැපැල් ලිපිනය",
+      "password": "මුරපදය",
+      "confirmPassword": "මුරපදය තහවුරු කරන්න",
+      "submit": "ලියාපදිංචි වන්න",
+      "haveAccount": "දැනටමත් ගිණුමක් තිබේද?",
+      "login": "පිවිසෙන්න",
+      "errorAllFields": "කරුණාකර සියලුම පිරවිය යුතු ස්ථාන පුරවන්න.",
+      "errorPasswordMismatch": "මුරපද නොගැලපේ.",
+      "errorRegistration": "ලියාපදිංචිය අසාර්ථක විය. කරුණාකර නැවත උත්සාහ කරන්න."
+    },
+    "auth": {
+      "logoutSuccess": "ඔබ සාර්ථකව පිටවී ඇත.",
+      "loginRequired": "මෙම පිටුවට ප්‍රවේශ වීමට ඔබ පුරනය වී සිටිය යුතුය."
+    }
   }
   

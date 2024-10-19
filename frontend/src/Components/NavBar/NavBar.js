@@ -1,21 +1,38 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./NavBar.css";
 import logo from "../../logo.svg";
-import "../Footer/Footer.js";
-import "../Home/Home.js";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../context/AuthContext";
 
 export default function NavBar() {
+  const { t } = useTranslation();
+  const { i18n } = useTranslation();
+  const { isLoggedIn, user, logout } = useContext(AuthContext);
+  const navigate = useNavigate();
 
-  const { t } = useTranslation();  // Translation hook
-
-  const { i18n } = useTranslation(); // Access i18n instance
-
-  // Function to change the language
   const changeLanguage = (lang) => {
     i18n.changeLanguage(lang);
   };
+
+  const handleLogout = async () => {
+    try {
+      const response = await fetch('http://localhost:8080/api/logout', {
+        method: 'POST',
+        credentials: 'include',
+      });
+
+      if (response.ok) {
+        logout();
+        navigate('/');
+      } else {
+        console.error('Logout failed');
+      }
+    } catch (error) {
+      console.error('Error during logout:', error);
+    }
+  };
+
 
   return (
     <div>
@@ -48,19 +65,25 @@ export default function NavBar() {
                   {t('navbar.home')}
                 </Link>
               </li>
+              {isLoggedIn && (
+                <li className="nav-item">
+                  <Link className="nav-link" to="/courses">
+                    {t('navbar.courses')}
+                  </Link>
+                </li>
+              )}
               <li className="nav-item">
-                <Link className="nav-link" to="#footer">
-                  {t('navbar.about')}
-                </Link>
+                <li className="nav-item">
+                  <a className="nav-link" href="#footer">{t('navbar.about')}</a>
+                </li>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="#footer">
-                  {t('navbar.contact')}
-                </Link>
+                <a className="nav-link" href="#footer">{t('navbar.contact')}</a>
               </li>
             </ul>
+            
             {/* Language Switcher */}
-            <ul className="navbar-nav ms-auto mb-2 mb-md-0">
+            <ul className="navbar-nav ms-auto mb-2 mb-md-0 me-3">
               <li className="nav-item">
                 <button className="btn btn-light btn-sm me-1" onClick={() => changeLanguage('en')}>
                   English
@@ -77,7 +100,29 @@ export default function NavBar() {
                 </button>
               </li>
             </ul>
-            <ul className="navbar-nav ms-auto mb-2 mb-md-0">
+            
+            {/* Login/Logout Button */}
+            <ul className="navbar-nav mb-2 mb-md-0 me-3">
+              <li className="nav-item">
+                {isLoggedIn ? (
+                  <>
+                    {/* <span className="navbar-text me-3">
+                      {t('navbar.welcome', { username: user?.username })}
+                    </span> */}
+                    <button onClick={handleLogout} className="btn btn-outline-light btn-sm">
+                      {t('navbar.logout')}
+                    </button>
+                  </>
+                ) : (
+                  <Link to="/login" className="btn btn-outline-light btn-sm">
+                    {t('navbar.login')}
+                  </Link>
+                )}
+              </li>
+            </ul>
+            
+            {/* Quick Access Dropdown */}
+            {/* <ul className="navbar-nav mb-2 mb-md-0">
               <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle"
@@ -96,7 +141,7 @@ export default function NavBar() {
                   </li>
                 </ul>
               </li>
-            </ul>
+            </ul> */}
           </div>
         </div>
       </nav>
