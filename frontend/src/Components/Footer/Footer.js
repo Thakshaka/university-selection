@@ -2,8 +2,11 @@ import React from "react";
 import logo from "./logo.svg";
 import "./Footer.css";
 import "../Home/Home.js"
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
+  const { t } = useTranslation();  // Translation hook
+  
   return (
     <div>
       <footer

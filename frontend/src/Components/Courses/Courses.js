@@ -6,9 +6,10 @@ import Footer from "../Footer/Footer";
 import ReCAPTCHA from "react-google-recaptcha";
 import DistrictSearchableSelect from '../SearchableSelect/DistrictSearchableSelect';
 import SubjectSearchableSelect from "../SearchableSelect/SubjectSearchableSelect";
-
+import { useTranslation } from "react-i18next";
 
 export default function Courses() {
+  const { t } = useTranslation();  // Translation hook
   const [subject1, setSubject1] = useState("");
   const [subject2, setSubject2] = useState("");
   const [subject3, setSubject3] = useState("");
@@ -32,7 +33,7 @@ export default function Courses() {
   const renderDistrictSelect = () => (
     <DistrictSearchableSelect
       id="district"
-      label="District*"
+      label={t('form.district')}
       options={districts}
       value={district}
       onChange={setDistrict}
@@ -174,25 +175,25 @@ export default function Courses() {
         </div>
 
         <div className="p-2 bd-highlight pb-4">
-          <h2 className="topic fw-bold text-center">FIND YOUR PERFECT COURSES HERE</h2>
+          <h2 className="topic fw-bold text-center">{t('courses.welcome')}</h2>
           <p className="text-gray-600 text-center">
-              Enter your academic details to discover suitable university courses
-            </p>
+            {t('courses.description')}
+          </p>
         </div>
 
         <div className="p-2 bd-highlight">
           <form className="row g-4 needs-validation" onSubmit={handleSubmit}>
             <div className="col-md-6">
-              {renderSubjectDropdown(subject1, setSubject1, "Subject No.1*", 1)}
+              {renderSubjectDropdown(subject1, setSubject1, t('form.subject1'), 1)}
               <div className="mt-2"></div>
-              {renderSubjectDropdown(subject2, setSubject2, "Subject No.2*", 2)}
+              {renderSubjectDropdown(subject1, setSubject1, t('form.subject2'), 2)}
               <div className="mt-2"></div>
-              {renderSubjectDropdown(subject3, setSubject3, "Subject No.3*", 3)}
+              {renderSubjectDropdown(subject1, setSubject1, t('form.subject1'), 3)}
             </div>
 
             <div className="col-md-6">
             <label htmlFor="zScore" className="form-label">
-              Your Z-score*
+                {t('form.zScore')}
             </label>
             <div className="input-group has-validation">
               <span className="input-group-text" id="inputGroupPrepend">
@@ -219,7 +220,7 @@ export default function Courses() {
               <div className="mt-2"></div>
 
               <label htmlFor="year" className="form-label">
-                Year*
+                {t('form.year')}
               </label>
               <select
                 className="form-select shadow-sm"
@@ -260,7 +261,7 @@ export default function Courses() {
                     aria-hidden="true"
                   ></span>
                 ) : (
-                  "Submit"
+                   t('courses.submit')
                 )}
               </button>
 
@@ -278,7 +279,7 @@ export default function Courses() {
                   setResponse({});
                 }}
               >
-                Reset
+                {t('courses.reset')}
               </button>
             </div>
           </form>

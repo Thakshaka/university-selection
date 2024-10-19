@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-
+import { useTranslation } from 'react-i18next';
 
 export default function Modal({ userInputData, response, filteredResponse, category }) {
+  const { t } = useTranslation();  // Translation hook
   const [filtered, setFiltered] = useState(true);
 
   useEffect(() => {
@@ -32,8 +33,8 @@ export default function Modal({ userInputData, response, filteredResponse, categ
           <div className="modal-header">
           <h5 className="modal-title fw-bold" id="staticBackdropLabel">
             {filtered 
-                ? "Suitable Courses" 
-                : "All Courses"}
+                ? t('modal.suitableCourses')
+                : t('modal.allCourses')}
           </h5>
             <button
               type="button"
@@ -44,23 +45,23 @@ export default function Modal({ userInputData, response, filteredResponse, categ
           </div>
           <div className="modal-body">
             <div className="row text-center">
-              <div className="col fw-bold fs-4 pb-4">G.C.E. A/L Examination ({userInputData.year})</div>
+              <div className="col fw-bold fs-4 pb-4">{t('modal.examTitle', { year: userInputData.year })}</div>
             </div>
             
             <div className="row px-2 py-1">
-              <div className="col">Stream</div>
+              <div className="col">{t('modal.stream')}</div>
               <div className="col">{category}</div>
             </div>
             <div className="row px-2 py-1">
-              <div className="col">Z-score</div>
+              <div className="col">{t('modal.zScore')}</div>
               <div className="col">{userInputData.zScore}</div>
             </div>
             <div className="row px-2 py-1">
-              <div className="col">A/L Year</div>
+              <div className="col">{t('modal.alYear')}</div>
               <div className="col">{userInputData.year}</div>
             </div>
             <div className="row px-2 py-1">
-              <div className="col">District</div>
+              <div className="col">{t('modal.district')}</div>
               <div className="col">{userInputData.district}</div>
             </div>
             <div className="pt-4">
@@ -70,10 +71,10 @@ export default function Modal({ userInputData, response, filteredResponse, categ
                   <tr>
                     <th scope="col">No.</th>
                     <th scope="col">Unicode</th>
-                    <th scope="col">Course</th>
-                    <th scope="col">University</th>
-                    <th scope="col">Previous Year</th>
-                    <th scope="col">This Year (Prediction)</th>
+                    <th scope="col">{t('modal.course')}</th>
+                    <th scope="col">{t('modal.university')}</th>
+                    <th scope="col">{t('modal.previousYear')}</th>
+                    <th scope="col">{t('modal.thisYearPrediction')}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -92,7 +93,7 @@ export default function Modal({ userInputData, response, filteredResponse, categ
                       : (
                         <tr>
                           <td colSpan="6" className="text-center">
-                            No courses found
+                            {t('modal.noCoursesFound')}
                           </td>
                         </tr>
                       )
@@ -110,7 +111,7 @@ export default function Modal({ userInputData, response, filteredResponse, categ
                     : (
                       <tr>
                         <td colSpan="6" className="text-center">
-                          No courses found
+                          {t('modal.noCoursesFound')}
                         </td>
                       </tr>
                     )}
@@ -125,14 +126,14 @@ export default function Modal({ userInputData, response, filteredResponse, categ
               className="btn btn-primary"
               onClick={() => setFiltered(!filtered)}
             >
-              {filtered ? "All Courses" : "Suitable Courses"}
+              {filtered ? t('modal.allCourses') : t('modal.suitableCourses')}
             </button>
             <button
               type="button"
               className="btn btn-secondary"
               data-bs-dismiss="modal"
             >
-              Close
+              {t('modal.close')}
             </button>
           </div>
         </div>
