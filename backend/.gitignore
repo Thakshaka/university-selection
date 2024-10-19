@@ -1,11 +1,22 @@
-# Ballerina generates this directory during the compilation of a package.
-# It contains compiler-generated artifacts and the final executable if this is an application package.
-target/
+# Ballerina specific
+/target
+/docker
+*.class
+*.jar
+*.war
+*.balx
 
-# Ballerina maintains the compiler-generated source code here.
-# Remove this if you want to commit generated sources.
-generated/
+# Ballerina lock file
+Ballerina.lock
 
-# Contains configuration values used during development time.
-# See https://ballerina.io/learn/provide-values-to-configurable-variables/ for more details.
+# Build files
+/build
+
+# Compiled files
+*.balx
+*.bir
+*.jar
+
+# Config files with sensitive data
 Config.toml
+/resource
