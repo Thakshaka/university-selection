@@ -6,6 +6,17 @@ Team Name: SMTP Innovators
 
 UniHope is an innovative AI-powered platform designed to assist Sri Lankan students in their university course selection process. By analyzing academic information, UniHope provides personalized course recommendations, helping students make informed decisions about their higher education journey.
 
+## Release Notes
+
+<b>20th October 2024</b>
+We're pleased to present <b>UniHope 1.0x</b>
+
+Highlights
+
+We're targeting UniHope's full release by the end of 2024, starting with the 2024 G.C.E. A/L students in Sri Lanka. Understanding the significant impact our system has on students' futures, we're currently conducting extensive beta testing and continuously enhancing our dataset to ensure utmost accuracy and reliability. 
+
+We warmly welcome contributions from open-source developers who are passionate about collaborating on innovative projects. Your expertise can help shape the future of this initiative. More details are in the description.
+
 ## Features
 
 - Personalized course recommendations based on academic profile
@@ -119,8 +130,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Contact
 
 Email: thakshakarathnayake20@gmail.com
-
-Project Link: [https://github.com/Thakshaka/iwb-300-smtp-innovators](https://github.com/Thakshaka/iwb-300-smtp-innovators)
 
 ## Acknowledgements
 
