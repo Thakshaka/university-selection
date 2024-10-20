@@ -1,5 +1,7 @@
 # UniHope - AI-Powered Personalized Courses Recommendation and Cutoff Prediction System for University Admission in Sri Lanka
 
+Team Name: SMTP Innovators
+
 ## Overview
 
 UniHope is an innovative AI-powered platform designed to assist Sri Lankan students in their university course selection process. By analyzing academic information, UniHope provides personalized course recommendations, helping students make informed decisions about their higher education journey.
