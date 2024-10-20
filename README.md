@@ -6,8 +6,8 @@ Team Name: SMTP Innovators
 
 UniHope is an innovative AI-powered platform designed to assist Sri Lankan students in their university course selection process. By analyzing academic information, UniHope provides personalized course recommendations, helping students make informed decisions about their higher education journey.
 
-<img src="./assets/images/UniHope_Home.png" alt="Home Page" width="600"/>
-<img src="./assets/images/UniHope_Courses.png" alt="Courses Page" width="600"/>
+<img src="./assets/images/home.png" alt="Home Page" width="600"/>
+<img src="./assets/images/courses.png" alt="Courses Page" width="600"/>
 
 
 ## Release Notes
