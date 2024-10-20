@@ -122,7 +122,7 @@ After setting up all components, access the application through `http://localhos
 > Please be noticed that, as this is a **real-world project**, access has been intentionally limited to a smaller portion of our dataset. Testing is currently available for the following subjects: **Combined Mathematics, Biology, Physics, and Chemistry**.
 
 <p align="center">
-    <img src="./assets/images/responsive.png" alt="Responsive" width="300"/>
+    <img src="./assets/images/responsive_1.png" alt="Responsive" width="300"/>
     <img src="./assets/images/responsive_2.png" alt="Responsive" width="300"/>
 </p>
 
