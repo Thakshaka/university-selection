@@ -37,28 +37,6 @@ postgresql:Client dbClient = check new(
 // Initialize the SMTP client
 email:SmtpClient smtpClient = check new (smtpHost, smtpUsername, smtpPassword);
 
-// Record type for Subject
-type Subject record {|
-    int id;
-    string subject_name;
-|};
-
-// Record type for District
-type District record {|
-    int id;
-    string district_name;
-|};
-
-// Record type for User
-type User record {|
-    int id;
-    string username;
-    string email;
-    string password_hash;
-    string? reset_token;
-    time:Civil? reset_token_expires;
-|};
-
 // Function to hash a password
 isolated function hashPassword(string password) returns string {
     byte[] hashedBytes = crypto:hashSha256(password.toBytes());
