@@ -8,7 +8,8 @@ UniHope is an innovative AI-powered platform designed to assist Sri Lankan stude
 
 <img src="./assets/images/home.png" alt="Home Page" width="600"/>
 <img src="./assets/images/courses.png" alt="Courses Page" width="600"/>
-
+<img src="./assets/images/results.png" alt="Results Page" width="600"/>
+<img src="./assets/images/responsive.png" alt="Mobile Responsive" width="300"/>
 
 ## Release Notes
 
