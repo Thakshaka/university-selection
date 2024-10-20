@@ -8,8 +8,7 @@ UniHope is an innovative AI-powered platform designed to assist Sri Lankan stude
 
 ## Release Notes
 
-**20th October 2024**<br><br>
-We're pleased to present **UniHope 1.0x**
+**20th October 2024** - We're pleased to present **UniHope 1.0x**
 
 Highlights:
 
