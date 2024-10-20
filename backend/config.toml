@@ -1,0 +1,17 @@
+# Database Configuration
+dbHost = "localhost"
+dbName = "university_selection"
+dbUsername = "postgres"
+dbPassword = "1234"
+dbPort = 5432
+
+# Email Configuration
+smtpHost = "smtp.gmail.com"
+smtpUsername = "thakshakarathnayake15@gmail.com"
+smtpPassword = ""
+
+# Server Configuration
+serverPort = 8080
+
+# Model API Configuration
+modelApiUrl = "http://localhost:8000"
