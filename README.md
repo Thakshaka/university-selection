@@ -53,7 +53,7 @@ Navigate to the backend directory:
 cd backend
 ```
 
-Create a `config.toml` file in the frontend directory and add:
+Create a `config.toml` file in the backend directory and add:
 ```
 # Database Configuration
 dbHost = ""
