@@ -1,0 +1,14 @@
+1. cd frontend
+
+npm i
+npm start
+.env -> REACT_APP_RECAPTCHA_SITE_KEY=6LdD_mEqAAAAAL6roJlF9DFGzF8GpR1dgoki4GG6
+
+2. cd backend
+
+bal run
+
+3. cd model
+
+pip install fastapi uvicorn pandas scikit-learn
+python -m uvicorn cutoff_predictor:app --reload

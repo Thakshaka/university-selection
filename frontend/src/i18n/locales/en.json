@@ -1,0 +1,89 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "quickAccess": "Quick Access",
+    "examResults": "Exam Results",
+    "login": "Login",
+    "logout": "Logout",
+    "welcome": "Welcome, {{username}}",
+    "courses": "Courses",
+    "language" : "Language"
+  },
+  "courses": {
+    "welcome": "FIND YOUR PERFECT COURSES HERE",
+    "description": "Enter your G.C.E. A/L information to discover suitable university courses",
+    "submit": "Submit",
+    "reset": "Reset"
+  },
+  "form": {
+    "subject1": "Subject No.1*",
+    "subject2": "Subject No.2*",
+    "subject3": "Subject No.3*",
+    "zScore": "Your Z-score*",
+    "year": "Year*",
+    "district": "District*",
+    "captchaError": "Please verify the CAPTCHA."
+  },
+  "modal": {
+    "suitableCourses": "Suitable Courses",
+    "allCourses": "All Courses",
+    "examTitle": "G.C.E. A/L Examination ({{year}})",
+    "stream": "Stream",
+    "zScore": "Z-score",
+    "alYear": "A/L Year",
+    "district": "District",
+    "course": "Course",
+    "university": "University",
+    "previousYear": "Previous Year",
+    "thisYearPrediction": "This Year (Prediction)",
+    "noCoursesFound": "No courses found",
+    "close": "Close"
+  },
+  "login": {
+    "title": "Sign in",
+    "email": "Email Address",
+    "password": "Password",
+    "submit": "Sign In",
+    "forgotPassword": "Forgot Password?",
+    "noAccount": "Don't have an account?",
+    "register": "Register",
+    "errorAllFields": "Please fill in all fields.",
+    "errorInvalid": "Invalid email or password."
+  },
+  "register": {
+    "title": "Register",
+    "name": "Full Name",
+    "email": "Email Address",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "submit": "Register",
+    "haveAccount": "Already have an account?",
+    "login": "Login",
+    "errorAllFields": "Please fill in all fields.",
+    "errorPasswordMismatch": "Passwords do not match.",
+    "errorRegistration": "Registration failed. Please try again."
+  },
+  "auth": {
+    "logoutSuccess": "You have been successfully logged out.",
+    "loginRequired": "You must be logged in to access this page."
+  },
+  "forgotPassword": {
+    "title": "Forgot Password",
+    "email": "Email Address",
+    "submit": "Send Reset Link",
+    "errorEmailRequired": "Email is required",
+    "errorUnknown": "An unknown error occurred. Please try again.",
+    "successMessage": "If an account exists for this email, you will receive password reset instructions shortly."
+  },
+  "resetPassword": {
+    "title": "Reset Password",
+    "newPassword": "New Password",
+    "confirmPassword": "Confirm New Password",
+    "submit": "Reset Password",
+    "errorPasswordMismatch": "Passwords do not match",
+    "errorUnknown": "An unknown error occurred. Please try again.",
+    "successMessage": "Your password has been successfully reset. Redirecting to login..."
+  }
+}

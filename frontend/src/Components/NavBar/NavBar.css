@@ -1,8 +1,85 @@
 .navbar {
-    padding: 10px 40px 10px 20px;
+  padding: 10px 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #003c7a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.brand-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 1px;
 }
 
 .navbar .nav-link {
-    font-size: 1.2rem;
-    margin-left: 2rem;
+  font-size: 1rem;
+  margin-left: 1.5rem;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  transition: width 0.3s ease;
+}
+
+.navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+.navbar .btn {
+  padding: 0.375rem 1rem;
+  font-size: 0.9rem;
+}
+
+.dropdown-menu {
+  background-color: #ffffff;
+  border: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+  color: #003c7a;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+}
+
+@media (max-width: 991.98px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .navbar .nav-link {
+    margin-left: 0;
+    padding: 0.5rem 0;
+  }
+
+  .navbar .btn {
+    margin-top: 0.5rem;
+  }
+}
+
+body {
+  padding-top: 70px;
 }
