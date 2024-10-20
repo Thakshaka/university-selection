@@ -2,11 +2,28 @@
 
 npm i
 npm start
-.env -> REACT_APP_RECAPTCHA_SITE_KEY=6LdD_mEqAAAAAL6roJlF9DFGzF8GpR1dgoki4GG6
+.env -> 
+
+REACT_APP_RECAPTCHA_SITE_KEY=6LdD_mEqAAAAAL6roJlF9DFGzF8GpR1dgoki4GG6
 
 2. cd backend
 
 bal run
+config.toml ->
+
+dbHost = ""
+dbName = ""
+dbUsername = ""
+dbPassword = ""
+dbPort = 
+
+smtpHost = ""
+smtpUsername = ""
+smtpPassword = ""
+
+serverPort = 
+
+modelApiUrl = ""
 
 3. cd model
 
