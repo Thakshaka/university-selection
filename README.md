@@ -110,6 +110,8 @@ python -m uvicorn cutoff_predictor:app --reload
 
 After setting up all components, access the application through `http://localhost:3000` in your web browser.
 
+Please be noticed that, as this is a real-world project, access has been intentionally limited to a smaller portion of the dataset. Testing is currently available for the following subjects: Combined Mathematics, Biology, Physics, and Chemistry.
+
 ## Contributing
 
 We welcome contributions from the open-source community! If you'd like to contribute, please:
