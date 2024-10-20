@@ -1,4 +1,4 @@
-# UniHope - AI-Powered Personalized Courses Recommendation and Cutoff Prediction System for University Admission in Sri Lanka
+# UniHope 📈 AI-Based Personalized Courses Recommendation and Cutoff Prediction SaaS
 
 Team Name: SMTP Innovators
 
@@ -12,15 +12,15 @@ UniHope is an innovative AI-powered platform designed to assist Sri Lankan stude
 - AI-driven cutoff mark predictions
 - Multi-language support (Sinhala, Tamil, English)
 - User-friendly interface for easy navigation
-- Comprehensive database of university courses and their requirements
+- Comprehensive dataset of university courses and their requirements
 - Secure user authentication and data protection
 
 ## Tech Stack
 
-- Frontend: React.js
+- Frontend: React.js, Bootstrap
 - Backend: Ballerina
 - Database: PostgreSQL
-- AI Model: Python (FastAPI, scikit-learn)
+- AI Model: Python, FastAPI
 
 ## Prerequisites
 
@@ -43,7 +43,7 @@ Create a `.env` file in the frontend directory and add:
 REACT_APP_RECAPTCHA_SITE_KEY=your_recaptcha_site_key_here
 ```
 
-Start the frontend server:
+Start the frontend:
 ```bash
 npm start
 ```
@@ -90,7 +90,7 @@ cd model
 
 Install required Python packages:
 ```bash
-pip install fastapi uvicorn pandas scikit-learn
+pip install -r requirements.txt
 ```
 
 Start the FastAPI server:
