@@ -8,14 +8,12 @@ UniHope is an innovative AI-powered platform designed to assist Sri Lankan stude
 
 ## Release Notes
 
-<b>20th October 2024</b>
-We're pleased to present <b>UniHope 1.0x</b>
+**20th October 2024**<br><br>
+We're pleased to present **UniHope 1.0x**
 
-Highlights
+Highlights:
 
-We're targeting UniHope's full release by the end of 2024, starting with the 2024 G.C.E. A/L students in Sri Lanka. Understanding the significant impact our system has on students' futures, we're currently conducting extensive beta testing and continuously enhancing our dataset to ensure utmost accuracy and reliability. 
-
-We warmly welcome contributions from open-source developers who are passionate about collaborating on innovative projects. Your expertise can help shape the future of this initiative. More details are in the description.
+We're targeting UniHope's full release by the end of 2024, starting with the 2024 G.C.E. A/L students in Sri Lanka. Understanding the significant impact our system has on students' futures, we're currently conducting extensive beta testing and continuously enhancing our dataset to ensure utmost accuracy and reliability. We warmly welcome contributions from open-source developers who are passionate about collaborating on innovative projects. Your expertise can help shape the future of this initiative. More details are in this [video](https://youtu.be/GnyNuqQK2Oc?feature=shared).
 
 ## Features
 
