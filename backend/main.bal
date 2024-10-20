@@ -271,7 +271,7 @@ service /api on new http:Listener(8080) {
     resource function post logout() returns http:Response {
         http:Response response = new;
         
-        // Here you would typically invalidate the session or token
+        // Here we would typically invalidate the session or token
         // For this example, we'll just send a success response
         
         response.setJsonPayload({"message": "Logged out successfully"});
