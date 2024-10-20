@@ -10,10 +10,6 @@ UniHope is an innovative AI-powered platform designed to assist Sri Lankan stude
     <img src="./assets/images/home.png" alt="Home Page" width="600"/>
     <img src="./assets/images/courses.png" alt="Courses Page" width="600"/>
     <img src="./assets/images/results.png" alt="Results Page" width="600"/>
-    <p align="center">
-        <img src="./assets/images/responsive.png" alt="Responsive" width="300"/>
-        <img src="./assets/images/responsive_2.png" alt="Responsive" width="300"/>
-    </p>
 </p>
 
 
@@ -124,6 +120,11 @@ After setting up all components, access the application through `http://localhos
 > **⚠️ Important:**
 > 
 > Please be noticed that, as this is a **real-world project**, access has been intentionally limited to a smaller portion of our dataset. Testing is currently available for the following subjects: **Combined Mathematics, Biology, Physics, and Chemistry**.
+
+<p align="center">
+    <img src="./assets/images/responsive.png" alt="Responsive" width="300"/>
+    <img src="./assets/images/responsive_2.png" alt="Responsive" width="300"/>
+</p>
 
 ## Contributing
 
