@@ -112,7 +112,7 @@ After setting up all components, access the application through `http://localhos
 
 > **⚠️ Important:**
 > 
-> Please be noticed that, as this is a **real-world project**, access has been intentionally limited to a smaller portion of the dataset. Testing is currently available for the following subjects: **Combined Mathematics, Biology, Physics, and Chemistry**.
+> Please be noticed that, as this is a **real-world project**, access has been intentionally limited to a smaller portion of our dataset. Testing is currently available for the following subjects: **Combined Mathematics, Biology, Physics, and Chemistry**.
 
 ## Contributing
 
