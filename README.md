@@ -116,7 +116,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-SMTP Innovators - smtpinnovators@gmail.com
+Email: thakshakarathnayake20@gmail.com
 
 Project Link: [https://github.com/Thakshaka/iwb-300-smtp-innovators](https://github.com/Thakshaka/iwb-300-smtp-innovators)
 
