@@ -2,8 +2,11 @@ import React from "react";
 import logo from "./logo.svg";
 import "./Footer.css";
 import "../Home/Home.js"
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
+  const { t } = useTranslation();  // Translation hook
+  
   return (
     <div>
       <footer
@@ -14,22 +17,22 @@ export default function Footer() {
         <div className="container p-5">
           <div className="row">
             <div className="col-lg-6 col-md-6">
-              <h5>University</h5>
+              <h5>UniHope</h5>
 
               <p className="description">
-                Description 1 here
+              An innovative AI-powered platform designed to assist Sri Lankan students in their university course selection process. We analyze your academic profile to provide personalized course recommendations, helping you make informed decisions about your higher education journey. Our user-friendly interface and multi-language support ensure accessibility for all, while our advanced algorithms offer up-to-date insights on course cutoff predictions. At UniHope, we're committed to simplifying your path to the right university course and empowering your academic future.
               </p>
             </div>
 
             <div className="col-lg-6 col-md-6">
               <h5>Contact</h5>
 
-              <p>
-                <p className="description">
-                Description 2 here
-                </p>
-                
+              <p className="description">
+                We're here to help you navigate your educational journey. If you have any questions, suggestions, or need assistance, please don't hesitate to reach out to us.
               </p>
+              <ul className="list-unstyled">
+                <li><i className="fas fa-envelope me-3"></i> Email: smtpinnovators@gmail.com</li>
+              </ul>
             </div>
           </div>
         </div>
