@@ -8,7 +8,8 @@
       "login": "Login",
       "logout": "Logout",
       "welcome": "Welcome, {{username}}",
-      "courses": "පාඨමාලා"
+      "courses": "පාඨමාලා",
+      "language" : "භාෂාව"
     },
     "courses": {
       "welcome": "ඔබට සුදුසු පාඨමාලා සොයාගන්න",

@@ -23,7 +23,14 @@ dependencies = [
 	{org = "ballerinax", name = "postgresql.driver"}
 ]
 modules = [
-	{org = "asus", packageName = "backend", moduleName = "backend"}
+	{org = "asus", packageName = "backend", moduleName = "backend"},
+	{org = "asus", packageName = "backend", moduleName = "backend.auth"},
+	{org = "asus", packageName = "backend", moduleName = "backend.course"},
+	{org = "asus", packageName = "backend", moduleName = "backend.db"},
+	{org = "asus", packageName = "backend", moduleName = "backend.email"},
+	{org = "asus", packageName = "backend", moduleName = "backend.types"},
+	{org = "asus", packageName = "backend", moduleName = "backend.user"},
+	{org = "asus", packageName = "backend", moduleName = "backend.utils"}
 ]
 
 [[package]]

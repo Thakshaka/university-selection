@@ -20,8 +20,8 @@ def predict_cutoff(category, district, year):
 
     predictions = []
 
-    for course in filtered_data['course'].unique():
-        course_data = filtered_data[filtered_data['course'] == course]
+    for unicode in filtered_data['unicode'].unique():
+        course_data = filtered_data[filtered_data['unicode'] == unicode]
 
         if len(course_data) >= 10:
             X = course_data[['year']]
@@ -37,17 +37,18 @@ def predict_cutoff(category, district, year):
 
             predicted_cutoff = model.predict(poly.transform([[year]]))
 
-            unicode = int(course_data['unicode'].iloc[0])
+            course = (course_data['course'].iloc[0])
             university = course_data['university'].iloc[0]
             previous_year_cutoff = float(course_data[course_data['year'] == year-1]['z_score'].values[0])  # Convert to float
 
-            predictions.append({
-                'course': course,
-                'unicode': unicode,
-                'university': university,
-                'previous_year': previous_year_cutoff,
-                'this_year_predicted': round(predicted_cutoff[0], 4)
-            })
+            if (predicted_cutoff > 0):
+                predictions.append({
+                    'course': course,
+                    'unicode': unicode,
+                    'university': university,
+                    'previous_year': previous_year_cutoff,
+                    'this_year_predicted': round(predicted_cutoff[0], 4)
+                })
 
     if not predictions:
         raise HTTPException(status_code=404, detail="No data available for the given filters.")

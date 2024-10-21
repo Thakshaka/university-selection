@@ -8,19 +8,22 @@ import ballerinax/postgresql.driver as _;
 import ballerina/email;
 
 // Define HTTP client to post data to model
-http:Client model = check new ("http://localhost:8000");
+http:Client model = check new (modelApiUrl);
 
 // Configure the PostgreSQL connection
-configurable string dbHost = "localhost";
-configurable string dbName = "university_selection";
-configurable string dbUsername = "postgres";
-configurable string dbPassword = "1234";
-configurable int dbPort = 5432;
+configurable string dbHost = ?;
+configurable string dbName = ?;
+configurable string dbUsername = ?;
+configurable string dbPassword = ?;
+configurable int dbPort = ?;
 
 // Configure email settings
-configurable string smtpHost = "smtp.gmail.com";
-configurable string smtpUsername = "thakshakarathnayake15@gmail.com";
-configurable string smtpPassword = "";
+configurable string smtpHost = ?;
+configurable string smtpUsername = ?;
+configurable string smtpPassword = ?;
+
+configurable int serverPort = ?;
+configurable string modelApiUrl = ?;
 
 // Initialize the PostgreSQL client
 postgresql:Client dbClient = check new(
@@ -142,7 +145,7 @@ function getCategory(string subject1, string subject2, string subject3) returns 
     return "Unknown";
 }
 
-service /api on new http:Listener(8080) {
+service /api on new http:Listener(serverPort) {
 
     // Forgot Password endpoint
     resource function post forgot\-password(@http:Payload json payload) returns http:Response {
